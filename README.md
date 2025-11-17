@@ -1,2 +1,3 @@
 # Test1
-Test 1 coś 
+To repozyttoium będzie służyło do testowania i uczenis się nowych elementów
+w języku python. 
