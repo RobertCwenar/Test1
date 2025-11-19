@@ -1,5 +1,7 @@
 # Practise Python 
 
+
+# How this will work
 This repository is intended for testing and learning new Python concepts and structures.
 ------------------------------------------------------------------------------------------
 To repozytorium będzie służyło do testowania i uczenia się nowych elementów
