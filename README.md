@@ -1,10 +1,10 @@
 # Practise Python 
 
 
-# How this will work
+# How this it work
 This repository is intended for testing and learning new Python concepts and structures.
 ------------------------------------------------------------------------------------------
-To repozytorium będzie służyło do testowania i uczenia się nowych elementów
+Repozytorium będzie służyło do testowania i uczenia się nowych elementów
 w języku Python. 
 
 I will commit exercises here as I practice Python.
