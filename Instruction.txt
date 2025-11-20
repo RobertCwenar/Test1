@@ -1,4 +1,0 @@
-Jeżeli chcesz stworzyć alias dla danego polecia w bashu do gita:
-alias cls="clear"
-
-ctrl+C - wyjście z terminalu/przerwanie transakcji w terminalu
