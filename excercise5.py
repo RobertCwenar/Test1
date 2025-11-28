@@ -6,30 +6,58 @@
 
 
 definition = {}
-print("Witaj w słowniku!")
-print("Dodaj nową definicję: ")
-print("Szukaj definicji: ")
-print("Usuń definicję: ")
-print("Wyświetl wszystkie definicje: ")
+print("Welcome in dictionary!")
 
-choose = input("Wybierz opcję (dodaj/szukaj/usun/wyswietl/wyjdz): ")
 
-while choose != "wyjdz":
-    if choose == "dodaj":
-        word = input("Podaj słowo: ")
-        mean = input("Podaj definicję: ")
+while True:
+    
+   
+    #print("Dodaj nową definicję: ")
+    #print("Szukaj definicji: ")
+    #print("Usuń definicję: ")
+    #print("Wyświetl wszystkie definicje: ")
+
+    choose = input("Wybierz opcję (dodaj/szukaj/usuń/wyswietl/wyjdz): ")
+
+
+    
+    if choose == "add":
+        word = input("Write word: ")
+        mean = input("Write definition: ")
         definition [word] = mean 
-        print(f"Dodano definicję dla słowa '{word}'.")
-
-    elif choose == "szukaj":
-        word = input("Podaj słowo do wyszukiwania: ")
+        print(f"Add new definition '{word}'.")
+        
+    elif choose == "look for":
+        word = input("Write word to looking for: ")
         if word in definition:
-            print(f"Definicja dla '{word}': {definition[word]}")
+            print(f"Definition for '{word}': {definition[word]}")
         else:
-            print(f'Słowo {word} nie ma w słowniku.')
-
-    elif choose == "usuń":
+            print(f"Słowo '{word}' nie ma w słowniku.")
+        
+    elif choose == "delete":
         word = input("Podaj słowo, które ma być usunięte:")
         if word in definition:
             print(f'Usunięto definicję dla słowa {word}.')
             del definition[word]
+        else:
+            print(f"Słowo [word] nie ma w słowniku. ")
+        
+    elif choose == "wyswietl":
+        if definition:
+            print("Wyświetl definicje w słowniku:")
+            for word, mean in definition.items():
+                print(f"{word}: {mean}")
+        else:
+            print("Słownik nie zawiera żadnych definicji.")
+        
+    elif choose == "wyjdz":
+        print("Wychodzę z programu")
+        break
+    
+    else:
+        print("Nieprawidłowa opcja. Spróbuj ponownie.")
+
+print("Koniec")
+    
+
+
