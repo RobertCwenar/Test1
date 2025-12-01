@@ -17,7 +17,7 @@ while True:
     #print("Usuń definicję: ")
     #print("Wyświetl wszystkie definicje: ")
 
-    choose = input("Choose option (add/look for/delete/display/exit): ")
+    choose = input("Choose option (add/look for/delete/display/modify/exit): ")
 
 
     
@@ -49,6 +49,15 @@ while True:
                 print(f"{word}: {mean}")
         else:
             print("The dictionary does not contain any data.")
+
+    elif choose == "modify":
+        word = input("Write definition to modify: ")
+        if word in definition:
+            new_mean = input("Write new definition: ")
+            definition[word] = new_mean
+            print(f"Modified definition for '{word}'.")
+        else:
+            print(f"Word '{word}' is not in the dictionary.")
         
     elif choose == "exit":
         print("Exiting program.")
