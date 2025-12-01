@@ -7,7 +7,7 @@ candies = {}
 print("Welcome to the sweets dictionary!")
 
 while True:
-    choose =input("Write add/display/sum ('end' if you want to stop): ").strip().lower()
+    choose =input("Write add/display/sum/rename ('end' if you want to stop): ").strip().lower()
     if choose == "add":
         while True:
             candy = input("Write candy name: ").strip().capitalize()
@@ -35,6 +35,15 @@ while True:
     elif choose == "sum":
         sum_price=sum(candies.values())
         print(f"The total price of all candies is: {sum_price} PLN")
+        continue
+    elif choose == "rename":
+        candy = input("Write candy name to rename: ").strip().capitalize()
+        if candy in candies:
+            new_candy = input("Write new candy name: ").strip().capitalize()
+            candies[new_candy] = candies.pop(candy)
+            print(f"Renamed candy '{candy}' to '{new_candy}'.")
+        else:
+            print(f"Candy '{candy}' is not in the dictionary.")
         continue
 
 print("Final candies in the dictionary:")
