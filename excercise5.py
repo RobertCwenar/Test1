@@ -57,7 +57,7 @@ while True:
     else:
         print("Wrong option. Try again.")
 
-print("The en.")
+print("The end.")
     
 
 
