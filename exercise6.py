@@ -9,11 +9,15 @@ print("Welcome to the sweets dictionary!")
 while True:
     choose =input("Write add/display/sum ('end' if you want to stop): ").strip().lower()
     if choose == "add":
-        candy = input("Write candy name: ").strip().capitalize()
-        price = round(float(input("Write candy price (PLN): ")), 2)
-        candies[candy] = price
-        print(f"Added new candy '{candy}' with price {price} PLN.")
-        continue
+        while True:
+            candy = input("Write candy name: ").strip().capitalize()
+            price = round(float(input("Write candy price (PLN): ")), 2)
+            candies[candy] = price
+            print(f"Added new candy '{candy}' with price {price} PLN.")
+            
+            answer = input("Do you want to add another? (y/n): ").strip().lower()
+            if answer == 'n':
+                break
 
     elif choose == "end":
         print("Exiting program.")
