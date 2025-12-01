@@ -1,0 +1,38 @@
+#exercise 6.py
+# Create a dictionary with sweet words and their prices. 
+# If the dictionary is a sweet word you write a information that the words is in the dictionary.
+
+
+candies = {}
+print("Welcome to the sweets dictionary!")
+
+while True:
+    choose =input("Write add/display/sum ('end' if you want to stop): ").strip().lower()
+    if choose == "add":
+        candy = input("Write candy name: ").strip().capitalize()
+        price = round(float(input("Write candy price (PLN): ")), 2)
+        candies[candy] = price
+        print(f"Added new candy '{candy}' with price {price} PLN.")
+        continue
+
+    elif choose == "end":
+        print("Exiting program.")
+        break
+
+    elif choose == "display":
+        if candies:
+            print("Display candies in the dictionary:")
+            for candy, price in candies.items():
+                print(f"{candy}: {price} PLN")
+        else:
+            print("The dictionary does not contain any data.")
+        continue
+
+    elif choose == "sum":
+        sum_price=sum(candies.values())
+        print(f"The total price of all candies is: {sum_price} PLN")
+        continue
+
+print("Final candies in the dictionary:")
+for candy, price in candies.items():
+    print(f"{candy}: {price} PLN")
