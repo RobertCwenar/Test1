@@ -4,7 +4,7 @@
 # 3. Usuwa wybrane przez użytkownika definicje
 # 4. Wyświetla wszystkie definicje w słowniku
 
-'''# exercise5
+'''# exercise5 example from tutorial
 definition = {}
 print("Welcome to the dictionary!")
 
