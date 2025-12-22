@@ -128,5 +128,44 @@ names2.add("Krzysztof")
 names2.add("Kasia")
 
 print(names2)
+'''
+
+# zadanie 7.2
+# Znajdź liczby od 100 do 470 włącznie, które są podzielne przez 7 i niepodzielne przez 5.
 
 '''
+liczb = [value
+         for value in range(100, 471)
+         if value % 7 == 0 and value % 5 != 0]
+
+print(liczb)
+'''
+
+# zadanie 7.3
+# Znajdź wszystkie liczby od 200 do 800 włącznie, które:
+# Są podzielne przez 9,
+# Nie są podzielne przez 4,
+# Mają sumę cyfr większą niż 10.
+'''
+numbers = [num 
+           for num in range (200, 801)
+           if num % 9 ==0 and num % 4 !=0 and sum(int(digit) for digit in str(num)) > 10
+           ]
+
+print(numbers)
+'''
+#Zadanie 7.4:
+#Znajdź wszystkie liczby od 100 do 999 (trzycyfrowe), które spełniają wszystkie warunki:
+#Są podzielne przez 7 lub przez 11,
+#Nie są podzielne przez 5,
+#Suma cyfr jest liczbą parzystą,
+#Pierwsza i ostatnia cyfra nie są takie same.
+#Zwróć wynik jako listę liczb.
+
+three_digit_num = [num 
+               for num in range (100, 1000)
+               if num % 7 == 0 or num % 11 ==0
+               if num % 5 != 0
+               if sum (int(digit) for digit in str(num)) % 2 ==0
+               if str(num)[0] != str(num)[-1]]
+print(three_digit_num)
