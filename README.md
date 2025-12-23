@@ -15,8 +15,9 @@ Repozytorium służy do ćwiczeń i nauki Pythona, szczególnie w kontekście an
 - Problem-solving and coding exercises
 
 ## Structure / Struktura repozytorium
-- `Python_basics/` – exercises to practice Python syntax and logic
-- `Data_analysis/` – small projects using Pandas, NumPy, CSV/Excel
+- `Basic Operations/` – exercises to practice Python syntax and logic
+- `Containers/` – exercises to practice list, tuple, set and dictionary
+- `Functions/` -exercises to practice definition
 
 ## Notes / Notatki
 All exercises and projects are part of my continuous learning process and demonstrate my growing skills in Python programming and data analysis.  
