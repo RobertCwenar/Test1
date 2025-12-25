@@ -10,7 +10,6 @@ Repozytorium służy do ćwiczeń i nauki Pythona, szczególnie w kontekście an
 ## Skills and Tools Practiced / Umiejętności i narzędzia
 - Python basics: loops, conditions, functions
 - Data manipulation with Pandas and NumPy
-- SQL queries and data extraction
 - Data visualization with Matplotlib and Seaborn
 - Problem-solving and coding exercises
 
