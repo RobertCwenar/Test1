@@ -1,3 +1,27 @@
 #File
 Instruction.txt
-_pycache_/
+
+#Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+#Virtual environment
+venv/
+.env/
+
+#IDEs
+.vscode/
+.idea/
+
+#System files
+.DS_Store
+Thumbs.db
+
+#Logs
+*.log
+
+#Build/dist
+build/
+dist/
+*.egg-info/
