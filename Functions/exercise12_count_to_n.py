@@ -32,34 +32,19 @@ def finish_timer(start):
     end = time.perf_counter()
     return end - start
 
+def function_performance(func, arg):
+    start= time.perf_counter()
+    func(arg) # if you want to create a function you use () after the function name
+    end =time.perf_counter()
+    return end -start 
+
+def show_message(message):
+    print("Message from function.", message)
+
 # Main program
-if __name__ == "__main__":
-    n = int(input("Enter a number n: "))
-    result1 = sum_to_n(n)
-    result2 = test1_sum_to_n(n)
-    result3 = test2_sum_to_n(n)
-    result4 = test3_sum_to_n(n)
-    result5 = test4_sum_to_n(n)
 
-
-# Checking time taken by each function using time library
-
-start = time.perf_counter()
-print(f"Sum of consecutive numbers from 1 to {n} is: {result1}")
-print(f"Time taken by main function: {finish_timer(start)} seconds")
-
-start = time.perf_counter()
-print(f"Test 1 result: {result2}")
-print(f"Time taken by test 1 function: {finish_timer(start)} seconds")
-
-start = time.perf_counter()
-print(f"Test 2 result: {result3}")
-print(f"Time taken by test 2 function: {finish_timer(start)} seconds")
-
-start = time.perf_counter()
-print(f"Test 3 result: {result4}")
-print(f"Time taken by test 3 function: {finish_timer(start)} seconds")
-
-start = time.perf_counter()
-print(f"Test 4 result: {result5}")
-print(f"Time taken by test 4 function: {finish_timer(start)} seconds")
+print(function_performance(sum_to_n, 50000))
+print(function_performance(test1_sum_to_n, 50000))
+print(function_performance(test2_sum_to_n, 50000))
+print(function_performance(test3_sum_to_n, 50000))  
+print(function_performance(test4_sum_to_n, 50000))
