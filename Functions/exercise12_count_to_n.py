@@ -32,7 +32,7 @@ def finish_timer(start):
     end = time.perf_counter()
     return end - start
 
-def function_performance(func, arg, how_many_times=4):
+def function_performance(func, arg, how_many_times=1, ):
     total_time =0 
 
     for i in range(how_many_times):
