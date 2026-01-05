@@ -32,19 +32,23 @@ def finish_timer(start):
     end = time.perf_counter()
     return end - start
 
-def function_performance(func, arg):
-    start= time.perf_counter()
-    func(arg) # if you want to create a function you use () after the function name
-    end =time.perf_counter()
-    return end -start 
+def function_performance(func, arg, how_many_times=4):
+    total_time =0 
 
+    for i in range(how_many_times):
+        start= time.perf_counter()
+        func(arg) # if you want to create a function you use () after the function name
+        end =time.perf_counter()
+        total_time = total_time + (end - start)
+    return total_time 
+    
 def show_message(message):
     print("Message from function.", message)
 
 # Main program
 
-print(function_performance(sum_to_n, 50000))
-print(function_performance(test1_sum_to_n, 50000))
+print(function_performance(sum_to_n, 50000, 25))
+print(function_performance(test1_sum_to_n, 50000, 25))
 print(function_performance(test2_sum_to_n, 50000))
 print(function_performance(test3_sum_to_n, 50000))  
 print(function_performance(test4_sum_to_n, 50000))
