@@ -26,7 +26,7 @@ print(a)
 print(b)    
 
 # exercise 15.2
-
+# Jak używać metody copy() do tworzenia płytkiej kopii listy.
 a = [1, 2, 3]
 b = a.copy()
 b.append(4)
@@ -35,6 +35,7 @@ print(a)
 print(b)
 
 # exercise 15.3
+# Jaka jest różnica między płytką a głęboką kopią zagnieżdżonej listy?
 
 a = [[1, 2], [3, 4]]
 b = a.copy()
@@ -104,6 +105,7 @@ print(has_required_skills(Michał, Required_skills))
 '''
 
 # exercise 15.6
+# Use ENUMERATE to print a numbered list of tasks.
 
 tasks = ['turning on the washing machine', 'cleaning my room', 'making dinner', 'doing the shopping']
 
