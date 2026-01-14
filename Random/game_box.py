@@ -22,7 +22,11 @@
 
 import random
 from enum import Enum 
-from collections import Counter
+
+def find_approximate_value(value):
+    lowest_value = int(value - 0.1 * value)
+    highest_value = int(value + 0.1 * value)
+    return random.randint(lowest_value, highest_value)
 
 event = Enum('Event', ['Chest', 'Empty'])
 lose_chance = {event.Chest: 0.6,
@@ -76,8 +80,10 @@ while game_length > 0:
         print("You have  drawn a Chest")
         drawn_colour = random.choices(list(colours_dictionary.keys()), list(colours_dictionary.values()))[0]
         print(f"The chest color is {drawn_colour.value}")
-        gamer_rewards = rewards_for_chests[drawn_colour]
-        gold_acquired += gamer_rewards
+        gamer_rewards = find_approximate_value(rewards_for_chests[drawn_colour])
+        gold_acquired_from_box = gamer_rewards
+        gold_acquired = gamer_rewards + gold_acquired
+        print(f"Congratulations you draw {drawn_colour.value} and we add {gold_acquired_from_box} to your wallet.")
     elif drawn_event == event.Empty:
         print("You have drawn nothing/ You are unlucky guy")
     
