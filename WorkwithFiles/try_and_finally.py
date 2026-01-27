@@ -14,3 +14,13 @@ with open("WorkwithFiles/oceany.txt", "r") as file:
 
 
 print(oceany)
+
+with open("WorkwithFiles/oceany.txt", "r", encoding="utf-8") as file:
+    oceany1 = file.readlines()  # wrzuci wszystko w listę
+
+
+print(oceany1)
+
+with open("WorkwithFiles/oceany.txt", "r", encoding="utf-8") as file:
+    for line in file:
+        print(line.strip())  # usuwa białe znaki z początku i końca linii   
